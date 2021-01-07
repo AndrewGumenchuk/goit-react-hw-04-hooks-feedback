@@ -1,17 +1,19 @@
 import './feedback.css';
-const FeedBackOptions = ({ options, onLeaveFeedback }) => (
-  <div>
-    {options.map(option => (
-      <button
-        className="item_button"
-        key={option}
-        type="button"
-        onClick={() => onLeaveFeedback(option)}
-      >
-        {option.slice(0, 1).toUpperCase() + option.slice(1)}
+function FeedBackOptions({ onLeaveFeedback }) {
+  return (
+    <>
+      <button className="item_button" onClick={onLeaveFeedback}>
+        Good
       </button>
-    ))}
-  </div>
-);
 
+      <button className="item_button" onClick={onLeaveFeedback}>
+        Neutral
+      </button>
+
+      <button className="item_button" onClick={onLeaveFeedback}>
+        Bad
+      </button>
+    </>
+  );
+}
 export default FeedBackOptions;
