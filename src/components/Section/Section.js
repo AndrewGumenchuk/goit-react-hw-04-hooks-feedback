@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Section = ({ title, children }) {
+function Section({ title, children }) {
   return (
   <section>
     <h2>{title}</h2>
